@@ -13,7 +13,6 @@ insert into class values(3,'Punam');
 insert into class values(4,'Aditi');
 commit;
 
-SET SESSION autocommit = 0;
 
 Select * from class;
 
