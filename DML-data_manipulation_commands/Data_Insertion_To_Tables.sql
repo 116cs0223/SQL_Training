@@ -107,7 +107,6 @@ VALUES(4,'Chennai');
 
 
 -- works_on records insertion
-delete from `company`.`works_on` where Pno!='';
 INSERT INTO `company`.`works_on`(`Essn`,`Pno`) VALUES('I010005', 1234 );
 INSERT INTO `company`.`works_on`(`Essn`,`Pno`) VALUES('I010005', 1235 );
 INSERT INTO `company`.`works_on`(`Essn`,`Pno`) VALUES('I010006', 1234 );
