@@ -1,3 +1,4 @@
 # SQL_Training
-Basic Sql commands
+Basic Sql commands.
+
 Works fine for MySQL DB.
