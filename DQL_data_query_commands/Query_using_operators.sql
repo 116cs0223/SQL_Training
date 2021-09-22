@@ -1,32 +1,36 @@
 -- like operator
-Select fname,lname,address from employee where Address like '%white%';
+# list of employees whose address contains string white in it
+Select fname,lname,address from employee where Address like '%white%'; 
+# list of employees whose birth year lies in 1960 to 1969
 Select fname,lname,Bdate from employee where Bdate like '196_______';
 
 -- between operator
-Select fname,lname,Salary from employee where (salary between 500000 and 700000);
+# list of employees whose salary lie between 5 and 7 lakh
+Select fname,lname,Salary from employee where (salary between 500000 and 700000); 
+
+-- in operator
+# list of employees who work for any one the departments having department number as 1,2 or 3
+Select * from employee where Dno IN (1,2,3);
 
 -- IS operator
-Select fname,lname from employee where Super_ssn IS NULL;
+# findout list of employees who are not managed by any supervisor.
+Select fname,lname from employee where Super_ssn IS NULL; 
 
--- max, min,sum,avg 
+-- max, min,sum,avg function
+# findout total no of employees, total salary, minimum salary, maximum salary, average salary of all employees
 Select count(*),sum(salary), max(salary), min(salary), avg(salary) from employee;
 
 -- group by, order by, having
-
+# find employees ordered by their salary in descending order
 select fname,lname,salary from employee order by Salary desc;
 
-select count(*), avg(salary), dname from employee,department where Dno=Dnumber group by dno;
+# find no of employees working in each department and 
+# average salary of employees in respective department
+select dno,count(*), avg(salary) from employee group by dno;
 
-select count(*),Pname from works_on,project where pno=Pnumber group by Pnumber,Pname;
+# find no of employees working in each project
+select Pno,count(*) from works_on group by Pno;
 
-select count(*),Pname from works_on,project where pno=Pnumber group by Pnumber,Pname having count(*)>2;
-
--- join
-
-select fname,lname,address
-from (employee join department on Dno=Dnumber)
-where Dname='CX';
-
-select E.fname as employee , S.fname as supervisor  from (employee E left join employee S on S.ssn=E.Super_ssn);
-
+# find no of employees working in each project where at least 3 employees work
+select pno,count(*) from works_on group by Pno having count(*)>=3;
 

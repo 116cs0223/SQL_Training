@@ -158,3 +158,11 @@ VALUES ('I010003','Chikesh Sahoo','M','1999-08-10','Kid');
 INSERT INTO `company`.`dependent`
 (`Essn`,`Dependent_name`,`Gender`,`Bdate`,`Relationship`)
 VALUES ('I010003','Randip Sahoo','M','1960-08-10','Father');
+
+INSERT INTO `company`.`dependent`
+(`Essn`,`Dependent_name`,`Gender`,`Bdate`,`Relationship`)
+VALUES ('I010008','Rajanee Mishra','F','1960-08-10','Mother');
+
+INSERT INTO `company`.`dependent`
+(`Essn`,`Dependent_name`,`Gender`,`Bdate`,`Relationship`)
+VALUES ('I010010','Prakas Bhaskar','M','1960-08-10','Father');
