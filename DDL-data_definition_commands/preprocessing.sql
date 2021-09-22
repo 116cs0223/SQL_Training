@@ -22,26 +22,41 @@ DROP PROCEDURE IF EXISTS PROC_DROP_FOREIGN_KEY;
 CALL company.PROC_DROP_FOREIGN_KEY('employee', 'employee_ibfk_1');
 CALL company.PROC_DROP_FOREIGN_KEY('employee', 'employee_ibfk_2');
 CALL company.PROC_DROP_FOREIGN_KEY('employee', 'employee_ibfk_3');
+CALL company.PROC_DROP_FOREIGN_KEY('employee', 'employee_ibfk_4');
+CALL company.PROC_DROP_FOREIGN_KEY('employee', 'employee_ibfk_5');
+CALL company.PROC_DROP_FOREIGN_KEY('employee', 'employee_ibfk_6');
+CALL company.PROC_DROP_FOREIGN_KEY('employee', 'FK_employee_department');
+CALL company.PROC_DROP_FOREIGN_KEY('employee', 'FK_employee_department');
+
 
 CALL company.PROC_DROP_FOREIGN_KEY('department', 'department_ibfk_1');
 CALL company.PROC_DROP_FOREIGN_KEY('department', 'department_ibfk_2');
 CALL company.PROC_DROP_FOREIGN_KEY('department', 'department_ibfk_3');
+CALL company.PROC_DROP_FOREIGN_KEY('department', 'FK_department_employee');
 
 CALL company.PROC_DROP_FOREIGN_KEY('dept_locations', 'dept_locations_ibfk_1');
 CALL company.PROC_DROP_FOREIGN_KEY('dept_locations', 'dept_locations_ibfk_2');
 CALL company.PROC_DROP_FOREIGN_KEY('dept_locations', 'dept_locations_ibfk_3');
+CALL company.PROC_DROP_FOREIGN_KEY('dept_locations', 'FK_dept_locations_department');
 
 CALL company.PROC_DROP_FOREIGN_KEY('project', 'project_ibfk_1');
 CALL company.PROC_DROP_FOREIGN_KEY('project', 'project_ibfk_2');
 CALL company.PROC_DROP_FOREIGN_KEY('project', 'project_ibfk_3');
+CALL company.PROC_DROP_FOREIGN_KEY('project', 'FK_project_department');
 
 CALL company.PROC_DROP_FOREIGN_KEY('works_on', 'works_on_ibfk_1');
 CALL company.PROC_DROP_FOREIGN_KEY('works_on', 'works_on_ibfk_2');
 CALL company.PROC_DROP_FOREIGN_KEY('works_on', 'works_on_ibfk_3');
+CALL company.PROC_DROP_FOREIGN_KEY('works_on', 'works_on_ibfk_4');
+CALL company.PROC_DROP_FOREIGN_KEY('works_on', 'works_on_ibfk_5');
+CALL company.PROC_DROP_FOREIGN_KEY('works_on', 'works_on_ibfk_6');
+CALL company.PROC_DROP_FOREIGN_KEY('works_on', 'FK_works_on_project');
+CALL company.PROC_DROP_FOREIGN_KEY('works_on', 'FK_works_on_employee');
 
 CALL company.PROC_DROP_FOREIGN_KEY('dependent', 'dependent_ibfk_1');
 CALL company.PROC_DROP_FOREIGN_KEY('dependent', 'dependent_ibfk_2');
 CALL company.PROC_DROP_FOREIGN_KEY('dependent', 'dependent_ibfk_3');
+CALL company.PROC_DROP_FOREIGN_KEY('dependent', 'FK_dependent_employee');
 
 DROP table IF EXISTS company.employee;
 DROP table IF EXISTS company.department;

@@ -54,6 +54,7 @@ Create table works_on
 (
 	Essn char(9) not null,
     Pno int not null,
+    Hours decimal(3,1) not null,
     primary key (Essn, Pno)
 );
 
@@ -65,6 +66,7 @@ Create table dependent
     Dependent_name varchar(15) not null,
     Gender char,
     Bdate date,
+    address varchar(30),
     Relationship varchar(10),
     check (Relationship in ('Mother','Father','Spouse','Kid')),
     primary key (Essn, Dependent_name)
