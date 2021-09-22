@@ -107,30 +107,30 @@ VALUES(4,'Chennai');
 
 
 -- works_on records insertion
-INSERT INTO `company`.`works_on`(`Essn`,`Pno`) VALUES('I010005', 1234 );
-INSERT INTO `company`.`works_on`(`Essn`,`Pno`) VALUES('I010005', 1235 );
-INSERT INTO `company`.`works_on`(`Essn`,`Pno`) VALUES('I010006', 1234 );
-INSERT INTO `company`.`works_on`(`Essn`,`Pno`) VALUES('I010006', 1236 );
-INSERT INTO `company`.`works_on`(`Essn`,`Pno`) VALUES('I010006', 1237 );
-INSERT INTO `company`.`works_on`(`Essn`,`Pno`) VALUES('I010007', 1237 );
-INSERT INTO `company`.`works_on`(`Essn`,`Pno`) VALUES('I010007', 1234 );
-INSERT INTO `company`.`works_on`(`Essn`,`Pno`) VALUES('I010008', 1235 );
-INSERT INTO `company`.`works_on`(`Essn`,`Pno`) VALUES('I010008', 1236 );
-INSERT INTO `company`.`works_on`(`Essn`,`Pno`) VALUES('I010009', 1237 );
-INSERT INTO `company`.`works_on`(`Essn`,`Pno`) VALUES('I010010', 1238 );
-INSERT INTO `company`.`works_on`(`Essn`,`Pno`) VALUES('I010011', 1236 );
-INSERT INTO `company`.`works_on`(`Essn`,`Pno`) VALUES('I010012', 1234 );
-INSERT INTO `company`.`works_on`(`Essn`,`Pno`) VALUES('I010013', 1235 );
-INSERT INTO `company`.`works_on`(`Essn`,`Pno`) VALUES('I010014', 1237 );
-INSERT INTO `company`.`works_on`(`Essn`,`Pno`) VALUES('I010015', 1234 );
-INSERT INTO `company`.`works_on`(`Essn`,`Pno`) VALUES('I010016', 1235 );
-INSERT INTO `company`.`works_on`(`Essn`,`Pno`) VALUES('I010016', 1236 );
-INSERT INTO `company`.`works_on`(`Essn`,`Pno`) VALUES('I010019', 1234 );
-INSERT INTO `company`.`works_on`(`Essn`,`Pno`) VALUES('I010020', 1237 );
-INSERT INTO `company`.`works_on`(`Essn`,`Pno`) VALUES('I010020', 1236 );
-INSERT INTO `company`.`works_on`(`Essn`,`Pno`) VALUES('I010021', 1238 );
-INSERT INTO `company`.`works_on`(`Essn`,`Pno`) VALUES('I010022', 1235 );
-INSERT INTO `company`.`works_on`(`Essn`,`Pno`) VALUES('I010022', 1236 );
+INSERT INTO `company`.`works_on`(`Essn`,`Pno`,`Hours`) VALUES('I010005', 1234, 5.0 );
+INSERT INTO `company`.`works_on`(`Essn`,`Pno`,`Hours`) VALUES('I010005', 1235, 3.0 );
+INSERT INTO `company`.`works_on`(`Essn`,`Pno`,`Hours`) VALUES('I010006', 1234, 3.0 );
+INSERT INTO `company`.`works_on`(`Essn`,`Pno`,`Hours`) VALUES('I010006', 1236, 2.5 );
+INSERT INTO `company`.`works_on`(`Essn`,`Pno`,`Hours`) VALUES('I010006', 1237, 2.5 );
+INSERT INTO `company`.`works_on`(`Essn`,`Pno`,`Hours`) VALUES('I010007', 1237, 6.0 );
+INSERT INTO `company`.`works_on`(`Essn`,`Pno`,`Hours`) VALUES('I010007', 1234, 2.0 );
+INSERT INTO `company`.`works_on`(`Essn`,`Pno`,`Hours`) VALUES('I010008', 1235, 4.0 );
+INSERT INTO `company`.`works_on`(`Essn`,`Pno`,`Hours`) VALUES('I010008', 1236, 4.0 );
+INSERT INTO `company`.`works_on`(`Essn`,`Pno`,`Hours`) VALUES('I010009', 1237, 8.0 );
+INSERT INTO `company`.`works_on`(`Essn`,`Pno`,`Hours`) VALUES('I010010', 1238, 8.0 );
+INSERT INTO `company`.`works_on`(`Essn`,`Pno`,`Hours`) VALUES('I010011', 1236, 8.0 );
+INSERT INTO `company`.`works_on`(`Essn`,`Pno`,`Hours`) VALUES('I010012', 1234, 8.0 );
+INSERT INTO `company`.`works_on`(`Essn`,`Pno`,`Hours`) VALUES('I010013', 1235, 8.0 );
+INSERT INTO `company`.`works_on`(`Essn`,`Pno`,`Hours`) VALUES('I010014', 1237, 8.0 );
+INSERT INTO `company`.`works_on`(`Essn`,`Pno`,`Hours`) VALUES('I010015', 1234, 8.0 );
+INSERT INTO `company`.`works_on`(`Essn`,`Pno`,`Hours`) VALUES('I010016', 1235, 4.0 );
+INSERT INTO `company`.`works_on`(`Essn`,`Pno`,`Hours`) VALUES('I010016', 1236, 4.0 );
+INSERT INTO `company`.`works_on`(`Essn`,`Pno`,`Hours`) VALUES('I010019', 1234, 8.0 );
+INSERT INTO `company`.`works_on`(`Essn`,`Pno`,`Hours`) VALUES('I010020', 1237, 4.0 );
+INSERT INTO `company`.`works_on`(`Essn`,`Pno`,`Hours`) VALUES('I010020', 1236, 4.0 );
+INSERT INTO `company`.`works_on`(`Essn`,`Pno`,`Hours`) VALUES('I010021', 1238, 8.0 );
+INSERT INTO `company`.`works_on`(`Essn`,`Pno`,`Hours`) VALUES('I010022', 1235, 4.0 );
+INSERT INTO `company`.`works_on`(`Essn`,`Pno`,`Hours`) VALUES('I010022', 1236, 4.0 );
 
 
 -- dependent records insertion

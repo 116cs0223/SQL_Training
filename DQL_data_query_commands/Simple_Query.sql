@@ -22,5 +22,3 @@ select ssn, Bdate, Dname from employee,department;
 
 --  (all coulmns)
 Select * from employee, department where Dname='CX' and Dno=Dnumber;
-
-
