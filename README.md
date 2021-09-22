@@ -1,4 +1,4 @@
-# SQL_Training
+# SQL_Training Batch1
 Basic Sql commands.
 
 Works fine for MySQL DB.
