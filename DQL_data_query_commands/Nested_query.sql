@@ -31,9 +31,9 @@ select * from employee where Dno = (select Dnumber from company.department where
 ---------------------------------------------------------------------------------------------------------------------
 
 -- findout the project where the last name of the employee is Bhaskar and the employee works as a worker or manager of the department that controls projects-----
+
 # step 1: find out employee ssn whose last name is Bhaskar
 Select ssn from company.employee where lname='Bhaskar';
-
 
 # step 2: find out project no where such employees work
 Select Pno from works_on where Essn in (Select ssn from company.employee where lname='Bhaskar');
@@ -48,22 +48,30 @@ Select Dnumber from company.department where Mgr_ssn IN (Select ssn from company
 Select * from company.project where Dnum IN (Select Dnumber from company.department where Mgr_ssn IN (Select ssn from company.employee where lname='Bhaskar'));
 
 # step 6 : combine step 3 and step 5 to get all the project details'
-Select * from company.project where Pnumber IN (Select Pno from works_on where Essn in (Select ssn from company.employee where lname='Bhaskar'))
+Select Pnumber,Pname from company.project where Pnumber IN (Select Pno from works_on where Essn in (Select ssn from company.employee where lname='Bhaskar'))
 union
-Select * from company.project where Dnum IN (Select Dnumber from company.department where Mgr_ssn IN (Select ssn from company.employee where lname='Bhaskar'));
+Select Pnumber,Pname from company.project where Dnum IN (Select Dnumber from company.department where Mgr_ssn IN (Select ssn from company.employee where lname='Bhaskar'));
 
 ----------------------------------------------------------------------------------------------------------------------------
 # same using join
-(select distinct Pnumber from project p
+(select distinct p.Pnumber,p.Pname from project p
 join department d on p.Dnum=d.Dnumber
 join employee e on d.Mgr_ssn=e.ssn
-where lname='Bhaskar')
+where e.lname='Bhaskar')
 UNION
-(select distinct Pnumber from project partition,works_on, employee 
-where Pno=Pnumber and Essn=ssn and lname='Bhaskar');
+(select distinct p.Pnumber,p.Pname from project p
+join works_on w on w.Pno=p.Pnumber
+join employee e on w.Essn = e.ssn
+where e.lname='Bhaskar');
 
--- list out all employees who work in any one the projects where employee Vikas works.
-Select distinct Essn from works_on where (Pno) In (select Pno from works_on where Essn='I010016');
 
--- list out managers who at least have one dependent
-Select fname,lname,ssn from employee,department where ssn=Mgr_ssn and exists (select 1 from dependent where Essn=ssn);
+-- list out all employees (name and ids) who work in any one the projects where employee Vikas works. We know ssn of Vikas is I010016  ----------------------
+#step 1: find list of project number from works_on table where employee Vikas (I010016) works
+select Pno from works_on where Essn='I010016';
+#step 2: find all the employee ssn from works_on table who work in any one of the above projects
+Select distinct Essn from works_on where Pno In (select Pno from works_on where Essn='I010016');
+
+#step 3: find employee name and ssn from employee table with above ids
+Select fname,lname,ssn from employee where ssn In ( Select distinct Essn from works_on where Pno In (select Pno from works_on where Essn='I010016'));
+
+------------------------------------------------------------------------------------------------------------
