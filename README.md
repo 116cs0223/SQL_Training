@@ -1,5 +1,5 @@
 # SQL_Training
-Basic Sql commands.
+Basic Sql learning repository. This helps you get started with SQL right from scratch with some basic to advanced commands.
 
 Works fine for MySQL DB.
 
